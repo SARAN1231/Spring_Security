@@ -1,5 +1,4 @@
-package com.saran.SecurityDemo;
-
+package com.saran.SecurityDemo.Controller;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

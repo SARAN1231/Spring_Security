@@ -1,4 +1,4 @@
-package com.saran.SecurityDemo;
+package com.saran.SecurityDemo.Models;
 
 public class Student {
     private  int id;
