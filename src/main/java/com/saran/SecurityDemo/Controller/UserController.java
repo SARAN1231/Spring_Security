@@ -1,7 +1,6 @@
 package com.saran.SecurityDemo.Controller;
 
 import com.saran.SecurityDemo.Models.Users;
-import com.saran.SecurityDemo.Repository.UserRepository;
 import com.saran.SecurityDemo.Services.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,5 +26,10 @@ public class UserController {
     @GetMapping("/user/all-user")
     public List<Users> getAllUsers() {
         return userService.getAllUsers();
+    }
+
+    @PostMapping("user/login")
+    public String login(@RequestBody Users user) {
+       return  userService.verify(user);
     }
 }
