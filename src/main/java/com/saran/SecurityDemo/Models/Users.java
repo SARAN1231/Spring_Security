@@ -1,9 +1,6 @@
 package com.saran.SecurityDemo.Models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,12 +16,16 @@ public class Users {
     private String userName;
     private String password;
 
+    @Enumerated(EnumType.STRING) // This ensures the role is stored as a string
+    private Role role;
+
     @Override
     public String toString() {
         return "Users{" +
                 "id=" + id +
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
+                ", role=" + role +
                 '}';
     }
 }

@@ -1,8 +1,11 @@
 package com.saran.SecurityDemo.Services;
 
+import com.saran.SecurityDemo.Models.Role;
 import com.saran.SecurityDemo.Models.UserPrincipal;
 import com.saran.SecurityDemo.Models.Users;
 import com.saran.SecurityDemo.Repository.UserRepository;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -16,6 +19,7 @@ public class MyUserDetailService implements UserDetailsService {
 
     public MyUserDetailService(UserRepository userRepository) {
         this.userRepository = userRepository;
+
     }
 
     @Override
